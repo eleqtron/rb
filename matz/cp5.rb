@@ -13,7 +13,3 @@ end
 def myfunc(&block)
   yield
 end
-
-y = 0
-myfunc{|x| y = 5}
-p y

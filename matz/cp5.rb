@@ -10,4 +10,10 @@ def sequence(n,m,c)
   end
 end
 
-sequence(3,5,1){|x| p x}
+def myfunc(&block)
+  yield
+end
+
+y = 0
+myfunc{|x| y = 5}
+p y

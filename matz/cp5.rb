@@ -10,6 +10,15 @@ def sequence(n,m,c)
   end
 end
 
-def myfunc(&block)
-  yield
+def myfunc x
+  p x
+  raise StandardError 'NameError'
+rescue ArgumentError => ex
+  p 'rescue'
+else
+  p 'else'
+ensure
+  p 'ensure'
 end
+
+myfunc(9)
